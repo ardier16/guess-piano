@@ -1,16 +1,14 @@
 <template>
   <div class="season-viewer">
-    <div>
-      {{ topWinners }}
+    <season-winners :season="season" />
 
-      <div class="season-viewer__episodes">
-        <episode-viewer
-          v-for="(episode, i) in season.episodes"
-          :key="i"
-          class="season-viewer__episode"
-          :episode="episode"
-        />
-      </div>
+    <div class="season-viewer__episodes">
+      <episode-viewer
+        v-for="(episode, i) in season.episodes"
+        :key="i"
+        class="season-viewer__episode"
+        :episode="episode"
+      />
     </div>
   </div>
 </template>
@@ -24,28 +22,6 @@ export default {
 
   props: {
     season: { type: Object, required: true }
-  },
-
-  computed: {
-    top () {
-      return this.season.episodes
-        .reduce((acc, ep) => [...acc, ...ep.songs], [])
-        .reduce((acc, song) => {
-          acc[song.winner] = acc[song.winner] || 0 + song.points * 2
-
-          song.guessers.forEach((item) => {
-            acc[item] = acc[item] || 0 + song.points
-          })
-
-          return acc
-        }, {})
-    },
-
-    topWinners () {
-      const topMap = Object.entries(this.top)
-        .map(([player, points]) => ({ player, points }))
-      return topMap.sort((a, b) => b.points - a.points)
-    }
   }
 }
 </script>
@@ -54,10 +30,6 @@ export default {
 .season-viewer {
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 .season-viewer__title {
