@@ -13,16 +13,14 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
+<script>
+export default {
   name: 'EpisodeViewer',
 
   props: {
     episode: { type: Object, required: true }
   }
-})
+}
 </script>
 
 <style lang="scss" scoped>

@@ -5,6 +5,8 @@
         #GUESSPIANO Сезон 1
       </h1>
 
+      {{ topWinners }}
+
       <div class="season-1__episodes">
         <episode-viewer
           v-for="(episode, i) in seasonData.episodes"
@@ -17,18 +19,46 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-import EpisodeViewer from '@/components/EpisodeViewer'
+<script>
+import EpisodeViewer from '@/components/EpisodeViewer.vue'
 import season1Data from '@/data/season-1.json'
 
-export default Vue.extend({
+export default {
+  name: 'Season1',
   components: { EpisodeViewer },
 
   computed: {
+    top () {
+      return season1Data.episodes
+        .reduce((acc, ep) => [...acc, ...ep.songs], [])
+        .reduce((acc, song) => {
+          if (!acc[song.winner]) {
+            acc[song.winner] = 0
+          }
+
+          acc[song.winner] += song.points * 2
+
+          song.guessers.forEach((item) => {
+            if (!acc[item]) {
+              acc[item] = 0
+            }
+
+            acc[item] += song.points
+          })
+
+          return acc
+        }, {})
+    },
+
+    topWinners () {
+      const topMap = Object.entries(this.top)
+        .map(([player, points]) => ({ player, points }))
+      return topMap.sort((a, b) => b.points - a.points)
+    },
+
     seasonData: () => season1Data
   }
-})
+}
 </script>
 
 <style>
