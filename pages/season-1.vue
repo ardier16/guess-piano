@@ -6,13 +6,12 @@
       </h1>
 
       <div class="season-1__episodes">
-        <div
+        <episode-viewer
           v-for="(episode, i) in seasonData.episodes"
           :key="i"
           class="season-1__episode"
-        >
-          {{ episode }}
-        </div>
+          :episode="episode"
+        />
       </div>
     </div>
   </div>
@@ -20,9 +19,12 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import EpisodeViewer from '@/components/EpisodeViewer'
 import season1Data from '@/data/season-1.json'
 
 export default Vue.extend({
+  components: { EpisodeViewer },
+
   computed: {
     seasonData: () => season1Data
   }
