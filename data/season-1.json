@@ -1,0 +1,198 @@
+{
+  "episodes": [
+    {
+      "songs": [
+        {
+          "name": "Таисия Повалий - За Тобой",
+          "points": 1,
+          "winner": "@estebnickaya",
+          "guessers": []
+        },
+        {
+          "name": "John Legend - All Of Me",
+          "points": 1,
+          "winner": "@innaanep",
+          "guessers": []
+        },
+        {
+          "name": "The Beatles - Yesterday",
+          "points": 1,
+          "winner": "@estebnickaya",
+          "guessers": ["@zzzpiga"]
+        },
+        {
+          "name": "Макс Корж - Мотылёк",
+          "points": 1,
+          "winner": "@volodymyr.maiboroda",
+          "guessers": []
+        },
+        {
+          "name": "Gazirovka - Black",
+          "points": 1,
+          "winner": "@robin.stellar",
+          "guessers": ["@nadya_melovinator11", "@victoriasliusar"]
+        },
+        {
+          "name": "One Republic - Counting Stars",
+          "points": 1,
+          "winner": "@nadya_melovinator11",
+          "guessers": []
+        },
+        {
+          "name": "Кар-Мэн - Сан-Франциско",
+          "points": 1,
+          "winner": "@maria_kalambet",
+          "guessers": [
+            "@katty_romanova",
+            "@victoriasliusar",
+            "@vadik_is_big",
+            "@volodymyr.maiboroda",
+            "@champagne_1961",
+            "@estebnickaya",
+            "@_aigul_2002_mel",
+            "@_melovin_blackgas_fan",
+            "@thezhanname"
+          ]
+        },
+        {
+          "name": "Людвиг ван Бетховен - К Элизе",
+          "points": 1,
+          "winner": "@estebnickaya",
+          "guessers": [
+            "@vadik_is_big",
+            "@_aigul_2002_mel",
+            "@nadya_melovinator11",
+            "@_wolf.tani_",
+            "@mari_228_",
+            "@love_my_life._._._"
+          ]
+        },
+        {
+          "name": "Валентин Стрыкало - Наше Лето",
+          "points": 1,
+          "winner": "@nadya_melovinator11",
+          "guessers": [
+            "@eyelessdude",
+            "@champagne_1961",
+            "@mari_228_"
+          ]
+        },
+        {
+          "name": "Ed Sheeran - Shape Of You",
+          "points": 1,
+          "winner": "@_krutyakova_",
+          "guessers": [
+            "@nadya_melovinator11",
+            "@love_my_life._._._",
+            "@mari_228_",
+            "@robin.stellar",
+            "@innaanep",
+            "@maria_kalambet",
+            "@capricomus_official",
+            "@_lesenoook_"
+          ]
+        },
+        {
+          "name": "Celine Dion - My Heart Will Go On",
+          "points": 1,
+          "winner": "@marusya_pi",
+          "guessers": [
+            "@nadya_melovinator11",
+            "@mari_228_",
+            "@capricomus_official",
+            "@kiparenko99",
+            "@robin.stellar",
+            "@_krutyakova_",
+            "@alex.zharkof",
+            "@olegkuzub",
+            "@dassha_m",
+            "@yuliamotyga",
+            "@irinka_rozhko"
+          ]
+        }
+      ] 
+    },
+    {
+      "songs": [
+        {
+          "name": "KAZKA - Плакала",
+          "points": 1,
+          "winner": "@volodymyr.maiboroda",
+          "guessers": []
+        },
+        {
+          "name": "Макс Корж - В Темноте",
+          "points": 1,
+          "winner": "@volodymyr.maiboroda",
+          "guessers": []
+        },
+        {
+          "name": "OST Реквием По Мечте",
+          "points": 1,
+          "winner": "@maria_kalambet",
+          "guessers": ["@dassha_m"]
+        },
+        {
+          "name": "Alan Walker - Faded",
+          "points": 1,
+          "winner": "@dassha_m",
+          "guessers": []
+        },
+        {
+          "name": "OST Gravity Falls",
+          "points": 1,
+          "winner": "@mari_228_",
+          "guessers": ["@innaanep"]
+        },
+        {
+          "name": "Нервы - Кофе Мой Друг",
+          "points": 1,
+          "winner": "@estebnickaya",
+          "guessers": ["@nadia.kovaliova"]
+        },
+        {
+          "name": "Леша Свик - Малиновый Свет",
+          "points": 1,
+          "winner": "@innaanep",
+          "guessers": []
+        },
+        {
+          "name": "Гречка - Люби Меня Люби",
+          "points": 1,
+          "winner": "@dassha_m",
+          "guessers": []
+        },
+        {
+          "name": "Макsим - Знаешь Ли Ты",
+          "points": 1,
+          "winner": "@yuliamotyga",
+          "guessers": []
+        },
+        {
+          "name": "Twenty One Pilots - Stressed Out",
+          "points": 1,
+          "winner": "@_lesenoook_",
+          "guessers": ["@nadya_melovinator11", "@estebnickaya", "@dassha_m"]
+        },
+        {
+          "name": "Linkin Park - In The End",
+          "points": 1,
+          "winner": "@robin.stellar",
+          "guessers": ["@nadya_melovinator11"]
+        },
+        {
+          "name": "Imagine Dragons - Believer",
+          "points": 1,
+          "winner": "@estebnickaya",
+          "guessers": []
+        },
+        {
+          "name": "Thirty Seconds To Mars - The Kill",
+          "points": 1,
+          "winner": "@innaanep",
+          "guessers": []
+        }
+      ]
+    }
+  ]
+}
