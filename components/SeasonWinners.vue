@@ -1,6 +1,14 @@
 <template>
   <div class="season-winners">
-    {{ topWinners }}
+    <div
+      v-for="(winner, i) in topWinners.slice(0, 10)"
+      :key="i"
+      class="season-winners__row"
+    >
+      <p>{{ i + 1 }} </p>
+      <p>{{ winner.player }}</p>
+      <p>{{ winner.points }}</p>
+    </div>
   </div>
 </template>
 
@@ -17,10 +25,10 @@ export default {
       return this.season.episodes
         .reduce((acc, ep) => [...acc, ...ep.songs], [])
         .reduce((acc, song) => {
-          acc[song.winner] = acc[song.winner] || 0 + song.points * 2
+          acc[song.winner] = (acc[song.winner] || 0) + song.points * 2
 
           song.guessers.forEach((item) => {
-            acc[item] = acc[item] || 0 + song.points
+            acc[item] = (acc[item] || 0) + song.points
           })
 
           return acc
@@ -35,3 +43,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.season-winners {
+  &__row {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr;
+  }
+}
+</style>
