@@ -1,10 +1,32 @@
 <template>
   <div class="season-viewer">
-    <season-winners :season="season" />
+    <div class="season-viewer__links">
+      <a
+        class="season-viewer__link"
+        href="#winners"
+      >
+        Победители
+      </a>
+
+      <a
+        v-for="(episode, i) in season.episodes"
+        :key="i"
+        class="season-viewer__link"
+        :href="`#episode-${i + 1}`"
+      >
+        Серия {{ i + 1 }}
+      </a>
+    </div>
+
+    <season-winners
+      v-show="!$route.hash || $route.hash === '#winners'"
+      :season="season"
+    />
 
     <div class="season-viewer__episodes">
       <episode-viewer
         v-for="(episode, i) in season.episodes"
+        v-show="$route.hash === `#episode-${i + 1}`"
         :key="i"
         class="season-viewer__episode"
         :episode="episode"
