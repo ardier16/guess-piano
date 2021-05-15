@@ -1,27 +1,14 @@
 <template>
-  <div class="container">
+  <div class="home">
     <div>
-      <Logo />
-      <h1 class="title">
-        guess-piano
+      <h1 class="home__title">
+        #GUESSPIANO
       </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+
+      <div class="home__seasons">
+        <nuxt-link to="/season-1">
+          Сезон 1
+        </nuxt-link>
       </div>
     </div>
   </div>
@@ -34,7 +21,7 @@ export default Vue.extend({})
 </script>
 
 <style>
-.container {
+.home {
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
@@ -43,7 +30,7 @@ export default Vue.extend({})
   text-align: center;
 }
 
-.title {
+.home__title {
   font-family:
     'Quicksand',
     'Source Sans Pro',
@@ -59,17 +46,5 @@ export default Vue.extend({})
   font-size: 100px;
   color: #35495e;
   letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
 }
 </style>
