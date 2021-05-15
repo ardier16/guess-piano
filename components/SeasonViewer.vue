@@ -31,18 +31,10 @@ export default {
       return this.season.episodes
         .reduce((acc, ep) => [...acc, ...ep.songs], [])
         .reduce((acc, song) => {
-          if (!acc[song.winner]) {
-            acc[song.winner] = 0
-          }
-
-          acc[song.winner] += song.points * 2
+          acc[song.winner] = acc[song.winner] || 0 + song.points * 2
 
           song.guessers.forEach((item) => {
-            if (!acc[item]) {
-              acc[item] = 0
-            }
-
-            acc[item] += song.points
+            acc[item] = acc[item] || 0 + song.points
           })
 
           return acc
