@@ -9,6 +9,10 @@
         <nuxt-link to="/season-1">
           Сезон 1
         </nuxt-link>
+
+        <nuxt-link to="/season-2">
+          Сезон 2
+        </nuxt-link>
       </div>
     </div>
   </div>
