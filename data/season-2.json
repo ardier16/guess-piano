@@ -1,0 +1,99 @@
+{
+  "episodes": [
+    {
+      "songs": [
+        {
+          "name": "SLAVA MARLOW - СНОВА Я НАПИВАЮСЬ",
+          "points": 1,
+          "winner": "@daryatko",
+          "guessers": [
+            "@innaanep",
+            "@maria_kalambet",
+            "@mealinder"
+          ]
+        },
+        {
+          "name": "OST Пираты Карибского Моря",
+          "points": 3,
+          "winner": "@daryatko",
+          "guessers": [
+            "@innaanep",
+            "@kseniamykolenko"
+          ]
+        },
+        {
+          "name": "Capone - Oh No",
+          "points": 1,
+          "winner": "@daryatko",
+          "guessers": [
+            "@innaanep",
+            "@mealinder",
+            "@kseniamykolenko",
+            "@zzzpiga"
+          ]
+        },
+        {
+          "name": "MONATIK - LOVE IT ритм",
+          "points": 3,
+          "winner": "@innaanep",
+          "guessers": [
+            "@kseniamykolenko",
+            "@daryatko",
+            "@melovinator3_5alekseevez18"
+          ]
+        },
+        {
+          "name": "OST Деревня Дураков",
+          "points": 2,
+          "winner": "@innaanep",
+          "guessers": [
+            "@kseniamykolenko",
+            "@maria_kalambet",
+            "@daryatko",
+            "@nadya_salogub"
+          ]
+        },
+        {
+          "name": "Kygo - Firestone",
+          "points": 2,
+          "winner": "@innaanep",
+          "guessers": []
+        },
+        {
+          "name": "Rauf & Faik - Я Люблю Тебя",
+          "points": 2,
+          "winner": "@melovinator3_5alekseevez18",
+          "guessers": []
+        },
+        {
+          "name": "Yiruma - Kiss The Rain",
+          "points": 5,
+          "winner": "@kseniamykolenko",
+          "guessers": [
+            "@mealinder",
+            "@daryatko"
+          ]
+        },
+        {
+          "name": "OST Игра Престолов",
+          "points": 4,
+          "winner": "@kseniamykolenko",
+          "guessers": [
+            "@innaanep"
+          ]
+        },
+        {
+          "name": "Eiffel 65 - Blue",
+          "points": 3,
+          "winner": "@innaanep",
+          "guessers": [
+            "@kseniamykolenko",
+            "@yuliamotyga",
+            "@daryatko",
+            "@mealinder"
+          ]
+        }
+      ] 
+    }
+  ]
+}
