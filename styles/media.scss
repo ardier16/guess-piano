@@ -1,0 +1,50 @@
+$media-breakpoints: (
+  xxs: 320px,
+  xs: 375px,
+  sm: 600px,
+  md: 1200px
+);
+
+@mixin respond-to($breakpoint) {
+  $breakpoint-value: map-get($media-breakpoints, $breakpoint);
+
+  @media (max-width: $breakpoint-value) {
+    @content;
+  }
+}
+
+@mixin respond-prop($property, $lg, $md, $sm, $xs) {
+  #{$property}: $lg;
+
+  @include respond-below(md) {
+    #{$property}: $md;
+  }
+
+  @include respond-below(sm) {
+    #{$property}: $sm;
+  }
+
+  @include respond-below(xs) {
+    #{$property}: $xs;
+  }
+}
+
+:root {
+  --container-padding: 2.4rem;
+
+  @include respond-to(md) {
+    --container-padding: 1.6rem;
+  }
+}
+
+@mixin container() {
+  margin: 0 auto;
+  max-width: 120rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 var(--container-padding);
+
+  @include respond-to(md) {
+    max-width: 100%;
+  }
+}

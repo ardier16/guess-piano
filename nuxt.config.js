@@ -26,6 +26,14 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
+  styleResources: {
+    scss: [
+      '~/styles/schemes.scss',
+      '~/styles/ui.scss',
+      '~/styles/reset.scss'
+    ]
+  },
+
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
@@ -39,7 +47,8 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/style-resources'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

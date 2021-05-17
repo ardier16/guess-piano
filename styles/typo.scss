@@ -1,0 +1,62 @@
+@use 'media';
+
+:root {
+  // Font-weight
+  --typo-fw-regular: 400;
+  --typo-fw-medium: 500;
+  --typo-fw-bold: 700;
+
+  // Font-size
+  --typo-fs-h100: 1.2rem;
+  --typo-fs-h200: 1.4rem;
+  --typo-fs-h300: 1.8rem;
+  --typo-fs-h400: 2rem;
+  --typo-fs-h500: 2.4rem;
+  --typo-fs-h600: 3.2rem;
+  --typo-fs-h700: 4rem;
+  --typo-fs-h800: 4.8rem;
+
+  // Line-height
+  --typo-lh-h100: 1.6rem;
+  --typo-lh-h200: 2rem;
+  --typo-lh-h300: 2.8rem;
+  --typo-lh-h400: 3.2rem;
+  --typo-lh-h500: 3.2rem;
+  --typo-lh-h600: 4.8rem;
+  --typo-lh-h700: 5.6rem;
+  --typo-lh-h800: 6.4rem;
+}
+
+@mixin typo-lh($line-height) {
+  line-height: var(--typo-lh-#{$line-height});
+}
+
+@mixin typo-fs($size) {
+  font-size: var(--typo-fs-#{$size});
+}
+
+@mixin typo-fw($weight) {
+  font-weight: var(--typo-fw-#{$weight});
+}
+
+@mixin typo($size, $weight: '') {
+  @include typo-fs($size);
+  @include typo-lh($size);
+
+  @if ($weight != '') {
+    @include typo-fw($weight);
+  }
+}
+
+// stylelint-disable length-zero-no-unit
+@mixin typo-skeleton($size, $margin-top: 0rem, $margin-bottom: 0rem) {
+  @include typo-fs($size);
+
+  --typo-skeleton-lh: var(--typo-lh-#{$size});
+  --typo-skeleton-fs: var(--typo-fs-#{$size});
+  --typo-skeleton-spacing: calc((var(--typo-skeleton-lh) - var(--typo-skeleton-fs)) / 2);
+
+  margin-top: calc(var(--typo-skeleton-spacing) + #{$margin-top});
+  margin-bottom: calc(var(--typo-skeleton-spacing) + #{$margin-bottom});
+  line-height: 1;
+}
