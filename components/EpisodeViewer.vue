@@ -5,10 +5,25 @@
       :key="i"
       class="episode-viewer__song"
     >
-      <p>{{ i + 1 }}</p>
-      <p>{{ song.name }}</p>
-      <p>{{ song.winner }}</p>
-      <p>{{ song.guessers }}</p>
+      <p class="episode-viewer__song-id">
+        {{ i + 1 }}
+      </p>
+
+      <p class="episode-viewer__song-name">
+        {{ song.name }}
+      </p>
+
+      <p class="episode-viewer__song-winner">
+        {{ song.winner }}
+      </p>
+
+      <p class="episode-viewer__song-points">
+        {{ song.points }}
+      </p>
+
+      <p class="episode-viewer__song-guessers">
+        {{ song.guessers.join('\n') }}
+      </p>
     </div>
   </div>
 </template>
@@ -27,7 +42,7 @@ export default {
 .episode-viewer {
   &__song {
     display: grid;
-    grid-template-columns: 0.5fr 1fr 0.8fr 0.8fr;
+    grid-template-columns: 0.5fr 1fr 0.8fr 0.5fr 0.8fr;
   }
 }
 </style>
