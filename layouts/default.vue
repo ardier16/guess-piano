@@ -26,6 +26,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
+  background-color: #fafafa;
   font-family:
     'Source Sans Pro',
     -apple-system,
