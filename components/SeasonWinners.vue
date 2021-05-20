@@ -15,9 +15,10 @@
         {{ i + 1 }}
       </p>
 
-      <p class="season-winners__player">
-        {{ winner.player }}
-      </p>
+      <instagram-profile
+        class="season-winners__player"
+        :name="winner.player"
+      />
 
       <p class="season-winners__points">
         {{ winner.points }}
@@ -27,8 +28,11 @@
 </template>
 
 <script>
+import InstagramProfile from './InstagramProfile'
+
 export default {
   name: 'SeasonWinners',
+  components: { InstagramProfile },
 
   props: {
     season: { type: Object, required: true }
