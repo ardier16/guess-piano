@@ -1,0 +1,21 @@
+.table {
+  background-color: #fff;
+
+  &__row {
+    display: grid;
+    padding: spacing(400);
+
+    &:nth-child(odd) {
+      background-color: #f3f3f3;
+    }
+
+    &--head:first-child {
+      background-color: #111;
+      color: #fff;
+
+      p {
+        @include typo-fw(medium);
+      }
+    }
+  }
+}

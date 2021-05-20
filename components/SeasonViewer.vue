@@ -7,6 +7,7 @@
     <div class="season-viewer__links">
       <nuxt-link
         class="season-viewer__link"
+        :class="{ 'season-viewer__link--active': !$route.hash }"
         active-class="season-viewer__link--active"
         to="#winners"
       >

@@ -1,13 +1,27 @@
 <template>
-  <div class="season-winners">
+  <div class="season-winners table">
+    <div class="season-winners__row table__row table__row--head">
+      <p>#</p>
+      <p>Участник</p>
+      <p>Очки</p>
+    </div>
+
     <div
       v-for="(winner, i) in topWinners.slice(0, 10)"
       :key="i"
-      class="season-winners__row"
+      class="season-winners__row table__row"
     >
-      <p>{{ i + 1 }} </p>
-      <p>{{ winner.player }}</p>
-      <p>{{ winner.points }}</p>
+      <p class="season-winners__id">
+        {{ i + 1 }}
+      </p>
+
+      <p class="season-winners__player">
+        {{ winner.player }}
+      </p>
+
+      <p class="season-winners__points">
+        {{ winner.points }}
+      </p>
     </div>
   </div>
 </template>
@@ -45,9 +59,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "./styles/table";
+
 .season-winners {
   &__row {
-    display: grid;
     grid-template-columns: 0.5fr 1fr 1fr;
   }
 }
