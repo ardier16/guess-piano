@@ -1,9 +1,7 @@
 <template>
   <div class="app scheme scheme--light">
     <AppHeader />
-    <div class="app__content">
-      <Nuxt />
-    </div>
+    <Nuxt class="app__content" />
     <AppFooter />
   </div>
 </template>
@@ -41,7 +39,7 @@ export default {
   &__content {
     @include container;
 
-    flex: 1;
+    flex: 2;
   }
 }
 </style>

@@ -1,19 +1,23 @@
 <template>
   <div class="home">
-    <div>
-      <h1 class="home__title">
-        #GUESSPIANO
-      </h1>
+    <h1 class="home__title">
+      #GUESSPIANO
+    </h1>
 
-      <div class="home__seasons">
-        <nuxt-link to="/season-1">
-          Сезон 1
-        </nuxt-link>
+    <div class="home__seasons">
+      <nuxt-link
+        class="home__season"
+        to="/season-1"
+      >
+        Сезон 1
+      </nuxt-link>
 
-        <nuxt-link to="/season-2">
-          Сезон 2
-        </nuxt-link>
-      </div>
+      <nuxt-link
+        class="home__season"
+        to="/season-2"
+      >
+        Сезон 2
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -33,12 +37,34 @@ export default {
   text-align: center;
 
   &__title {
-    @include typo(h100, medium);
+    @include typo(h800, light);
 
-    font-weight: 300;
-    font-size: 100px;
     color: #35495e;
     letter-spacing: 1px;
+  }
+
+  &__seasons {
+    margin-top: spacing(700);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: spacing(700);
+  }
+
+  &__season {
+    @include typo(h600, medium);
+
+    display: flex;
+    border: 1px solid lightgray;
+    color: black;
+    padding: spacing(700);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    text-decoration: none;
+    transition: all 200ms ease-out;
+
+    &:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
   }
 }
 </style>

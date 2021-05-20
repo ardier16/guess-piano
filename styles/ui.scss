@@ -3,9 +3,6 @@
 @import 'colors';
 @import 'spacing';
 
-// stylelint-disable value-keyword-case
-$app-font-family: 'Lato', Arial, sans-serif;
-
 @mixin clearfix() {
   &::after {
     display: block;
