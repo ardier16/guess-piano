@@ -1,7 +1,9 @@
 <template>
   <div class="app scheme scheme--light">
     <AppHeader />
-    <Nuxt />
+    <div class="app__content">
+      <Nuxt />
+    </div>
     <AppFooter />
   </div>
 </template>
@@ -19,7 +21,13 @@ export default {
 </script>
 
 <style lang="scss">
-html {
+.app {
+  @include typo(h300);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
   font-family:
     'Source Sans Pro',
     -apple-system,
@@ -29,5 +37,11 @@ html {
     'Helvetica Neue',
     Arial,
     sans-serif;
+
+  &__content {
+    @include container;
+
+    flex: 1;
+  }
 }
 </style>

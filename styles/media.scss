@@ -30,16 +30,16 @@ $media-breakpoints: (
 }
 
 :root {
-  --container-padding: 2.4rem;
+  --container-padding: 24px;
 
   @include respond-to(md) {
-    --container-padding: 1.6rem;
+    --container-padding: 16px;
   }
 }
 
 @mixin container() {
   margin: 0 auto;
-  max-width: 120rem;
+  max-width: 1200px;
   width: 100%;
   box-sizing: border-box;
   padding: 0 var(--container-padding);

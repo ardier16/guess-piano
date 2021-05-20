@@ -16,20 +16,11 @@ export default {
 
 <style lang="scss" scoped>
 .app-header {
+  background: red;
+  height: 48px;
+
   &__title {
-    font-family:
-      'Quicksand',
-      'Source Sans Pro',
-      -apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
-      Roboto,
-      'Helvetica Neue',
-      Arial,
-      sans-serif;
-    display: block;
     font-weight: 300;
-    font-size: 48px;
     color: #35495e;
     letter-spacing: 1px;
     text-align: center;

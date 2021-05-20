@@ -1,14 +1,14 @@
 :root {
   // Common spacings
-  --spacing-100: 0.2rem;
-  --spacing-200: 0.4rem;
-  --spacing-300: 0.8rem;
-  --spacing-400: 1.6rem;
-  --spacing-500: 2.4rem;
-  --spacing-600: 3.2rem;
-  --spacing-700: 4.8rem;
-  --spacing-800: 6.4rem;
-  --spacing-900: 8.6rem;
+  --spacing-100: 02px;
+  --spacing-200: 04px;
+  --spacing-300: 08px;
+  --spacing-400: 16px;
+  --spacing-500: 24px;
+  --spacing-600: 32px;
+  --spacing-700: 48px;
+  --spacing-800: 64px;
+  --spacing-900: 86px;
 }
 
 @function spacing($sp) {
