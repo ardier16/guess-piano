@@ -46,6 +46,7 @@ export default {
   background-color: #fff;
   display: flex;
   align-items: center;
+  z-index: 2;
 
   &__content {
     @include container;

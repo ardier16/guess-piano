@@ -4,6 +4,7 @@
   &__row {
     display: grid;
     padding: spacing(400);
+    align-items: center;
 
     &:nth-child(odd) {
       background-color: #f3f3f3;

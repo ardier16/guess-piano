@@ -21,9 +21,10 @@
         {{ song.name }}
       </p>
 
-      <p class="episode-viewer__song-winner">
-        {{ song.winner }}
-      </p>
+      <instagram-profile
+        class="episode-viewer__song-winner"
+        :name="song.winner"
+      />
 
       <p class="episode-viewer__song-points">
         {{ song.points }}
@@ -37,8 +38,11 @@
 </template>
 
 <script>
+import InstagramProfile from './InstagramProfile'
+
 export default {
   name: 'EpisodeViewer',
+  components: { InstagramProfile },
 
   props: {
     episode: { type: Object, required: true }
@@ -52,7 +56,7 @@ export default {
 .episode-viewer {
   &__row {
     display: grid;
-    grid-template-columns: 0.5fr 1fr 0.8fr 0.5fr 0.8fr;
+    grid-template-columns: 0.2fr 0.9fr 1fr 0.2fr 0.8fr;
   }
 }
 </style>
