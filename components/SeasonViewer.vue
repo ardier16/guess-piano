@@ -1,36 +1,44 @@
 <template>
   <div class="season-viewer">
+    <h2 class="season-viewer__title">
+      Сезон #{{ season.id }}
+    </h2>
+
     <div class="season-viewer__links">
-      <a
+      <nuxt-link
         class="season-viewer__link"
-        href="#winners"
+        active-class="season-viewer__link--active"
+        to="#winners"
       >
         Победители
-      </a>
+      </nuxt-link>
 
-      <a
+      <nuxt-link
         v-for="(episode, i) in season.episodes"
         :key="i"
         class="season-viewer__link"
-        :href="`#episode-${i + 1}`"
+        active-class="season-viewer__link--active"
+        :to="`#episode-${i + 1}`"
       >
         Серия {{ i + 1 }}
-      </a>
+      </nuxt-link>
     </div>
 
-    <season-winners
-      v-show="!$route.hash || $route.hash === '#winners'"
-      :season="season"
-    />
-
-    <div class="season-viewer__episodes">
-      <episode-viewer
-        v-for="(episode, i) in season.episodes"
-        v-show="$route.hash === `#episode-${i + 1}`"
-        :key="i"
-        class="season-viewer__episode"
-        :episode="episode"
+    <div class="season-viewer__main">
+      <season-winners
+        v-show="!$route.hash || $route.hash === '#winners'"
+        :season="season"
       />
+
+      <div class="season-viewer__episodes">
+        <episode-viewer
+          v-for="(episode, i) in season.episodes"
+          v-show="$route.hash === `#episode-${i + 1}`"
+          :key="i"
+          class="season-viewer__episode"
+          :episode="episode"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -48,27 +56,49 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .season-viewer {
-  margin: 0 auto;
-  min-height: 100vh;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-.season-viewer__title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+  &__title {
+    @include typo(h700, medium);
+
+    text-align: center;
+  }
+
+  &__links {
+    margin-top: spacing(500);
+    display: grid;
+    grid-auto-flow: column;
+    gap: spacing(500);
+    justify-content: center;
+  }
+
+  &__link {
+    @include typo(h400, medium);
+
+    display: flex;
+    border: 1px solid lightgray;
+    color: black;
+    padding: spacing(400) spacing(500);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    text-decoration: none;
+    transition: all 200ms ease-out;
+
+    &:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    &--active {
+      color: red;
+    }
+  }
+
+  &__main {
+    margin-top: spacing(600);
+  }
 }
 </style>

@@ -41,6 +41,8 @@ export default {
     @include container;
 
     flex: 2;
+    padding-top: spacing(600);
+    padding-bottom: spacing(600);
   }
 }
 </style>
