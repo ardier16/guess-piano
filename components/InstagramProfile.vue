@@ -1,19 +1,22 @@
 <template>
   <a
     class="instagram-profile"
+    :class="{ 'instagram-profile--short': short }"
     :href="`https://instagram.com/${nickname}`"
     target="_blank"
     rel="noopener nofollow noreferrer"
   >
-    <img
-      :src="`/avatars/${nickname}.jpg`"
-      :alt="name"
-      class="instagram-profile__avatar"
-    >
+    <template v-if="!short">
+      <img
+        :src="`/avatars/${nickname}.jpg`"
+        :alt="name"
+        class="instagram-profile__avatar"
+      >
 
-    <p class="instagram-profile__avatar-stub">
-      🙂
-    </p>
+      <p class="instagram-profile__avatar-stub">
+        🙂
+      </p>
+    </template>
 
     <p class="instagram-profile__name">
       {{ name }}
@@ -28,7 +31,8 @@ export default {
   name: 'InstagramProfile',
 
   props: {
-    name: { type: String, required: true }
+    name: { type: String, required: true },
+    short: { type: Boolean, default: false }
   },
 
   computed: {
@@ -82,6 +86,12 @@ export default {
     @include typo(h400, medium);
 
     margin-left: spacing(400);
+  }
+
+  &--short &__name {
+    @include typo(h200, medium);
+
+    margin-left: 0;
   }
 }
 </style>

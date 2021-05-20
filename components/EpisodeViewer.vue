@@ -8,41 +8,22 @@
       <p>Угадавшие</p>
     </div>
 
-    <div
+    <song-viewer
       v-for="(song, i) in episode.songs"
       :key="i"
       class="episode-viewer__row table__row"
-    >
-      <p class="episode-viewer__song-id">
-        {{ i + 1 }}
-      </p>
-
-      <p class="episode-viewer__song-name">
-        {{ song.name }}
-      </p>
-
-      <instagram-profile
-        class="episode-viewer__song-winner"
-        :name="song.winner"
-      />
-
-      <p class="episode-viewer__song-points">
-        {{ song.points }}
-      </p>
-
-      <p class="episode-viewer__song-guessers">
-        {{ song.guessers.join('\n') }}
-      </p>
-    </div>
+      :song="song"
+      :index="i"
+    />
   </div>
 </template>
 
 <script>
-import InstagramProfile from './InstagramProfile'
+import SongViewer from './SongViewer'
 
 export default {
   name: 'EpisodeViewer',
-  components: { InstagramProfile },
+  components: { SongViewer },
 
   props: {
     episode: { type: Object, required: true }

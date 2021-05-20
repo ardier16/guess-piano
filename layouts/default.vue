@@ -19,14 +19,8 @@ export default {
 </script>
 
 <style lang="scss">
-.app {
-  @include typo(h300);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #fafafa;
+html,
+button {
   font-family:
     'Source Sans Pro',
     -apple-system,
@@ -36,6 +30,16 @@ export default {
     'Helvetica Neue',
     Arial,
     sans-serif;
+}
+
+.app {
+  @include typo(h300);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #fafafa;
 
   &__content {
     @include container;
