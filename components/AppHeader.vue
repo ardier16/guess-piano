@@ -61,6 +61,17 @@ export default {
     gap: spacing(500);
   }
 
+  &__link {
+    @include typo(h300, medium);
+
+    text-decoration: none;
+    color: #111;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &__title {
     @include typo(h500, medium);
 

@@ -24,7 +24,7 @@ export default {
     @include typo(h300, medium);
 
     text-align: center;
-    color: #666;
+    color: #111;
   }
 }
 </style>
