@@ -69,6 +69,10 @@ export default {
     text-align: center;
     color: color(text);
     font-family: var(--logo-font-family);
+
+    @include respond-to(sm) {
+      @include typo(h600, medium);
+    }
   }
 
   &__links {
@@ -77,6 +81,14 @@ export default {
     grid-auto-flow: column;
     gap: spacing(500);
     justify-content: center;
+
+    @include respond-to(sm) {
+      margin-top: spacing(700);
+      gap: spacing(400);
+      overflow-x: auto;
+      justify-content: flex-start;
+      white-space: nowrap;
+    }
   }
 
   &__link {
@@ -90,6 +102,12 @@ export default {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     text-decoration: none;
     transition: all 200ms ease-out;
+
+    @include respond-to(sm) {
+      grid-auto-flow: row;
+      padding: spacing(300) spacing(400);
+      width: 100%;
+    }
 
     &:hover {
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);

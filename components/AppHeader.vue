@@ -62,6 +62,10 @@ export default {
     display: grid;
     grid-auto-flow: column;
     gap: spacing(600);
+
+    @include respond-to(sm) {
+      display: none;
+    }
   }
 
   &__link {

@@ -38,6 +38,11 @@ export default {
   &__row {
     display: grid;
     grid-template-columns: 0.2fr 0.9fr 1fr 0.2fr 0.6fr;
+
+    @include respond-to(sm) {
+      grid-template-columns: 32px 220px 320px 64px 96px;
+      width: 832px;
+    }
   }
 }
 </style>

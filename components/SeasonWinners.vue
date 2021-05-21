@@ -93,6 +93,11 @@ export default {
 .season-winners {
   &__row {
     grid-template-columns: 128px 1fr 1fr;
+
+    @include respond-to(sm) {
+      grid-template-columns: 48px 320px 64px;
+      width: 464px;
+    }
   }
 
   &__id {

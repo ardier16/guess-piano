@@ -2,11 +2,17 @@
   background-color: color(block-bg);
   border-radius:8px;
 
+
+  @include respond-to(sm) {
+    overflow-x: auto;
+  }
+
   &__row {
     display: grid;
     gap: spacing(300);
     padding: spacing(400);
     align-items: center;
+    width: 100%;
 
     &:nth-child(odd) {
       background-color: color(block-dark-bg);

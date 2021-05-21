@@ -41,6 +41,10 @@ export default {
 
     color: color(text-primary);
     font-family: var(--logo-font-family);
+
+    @include respond-to(sm) {
+      @include typo(h700, medium);
+    }
   }
 
   &__seasons {
@@ -48,6 +52,11 @@ export default {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: spacing(700);
+
+     @include respond-to(sm) {
+      margin-top: spacing(700);
+      gap: spacing(500);
+    }
   }
 
   &__season {
@@ -62,6 +71,12 @@ export default {
     text-decoration: none;
     transition: all 200ms ease-out;
     font-family: var(--logo-font-family);
+
+    @include respond-to(sm) {
+      @include typo(h500, medium);
+
+      padding: spacing(500);
+    }
 
     &:hover {
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
