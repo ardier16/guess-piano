@@ -134,6 +134,7 @@ export default {
 
     &-img {
       width: 32px;
+      height: 48px;
     }
   }
 

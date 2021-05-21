@@ -86,6 +86,7 @@ export default {
       margin-top: spacing(700);
       gap: spacing(400);
       overflow-x: auto;
+      overflow-y: hidden;
       justify-content: flex-start;
       white-space: nowrap;
     }
