@@ -7,6 +7,7 @@
 
       <p>Участник</p>
       <p>Очки</p>
+      <p>Песен угадано</p>
     </div>
 
     <div
@@ -35,6 +36,10 @@
       <p class="season-winners__points">
         {{ winner.points }}
       </p>
+
+      <p class="season-winners__guessed">
+        {{ winner.guessed }}
+      </p>
     </div>
   </div>
 </template>
@@ -55,10 +60,20 @@ export default {
       return this.season.episodes
         .reduce((acc, ep) => [...acc, ...ep.songs], [])
         .reduce((acc, song) => {
-          acc[song.winner] = (acc[song.winner] || 0) + song.points * 2
+          const guessers = [song.winner, ...song.guessers]
 
-          song.guessers.forEach((item) => {
-            acc[item] = (acc[item] || 0) + song.points
+          guessers.forEach((item) => {
+            if (!acc[item]) {
+              acc[item] = {
+                points: 0,
+                guessed: 0
+              }
+            }
+
+            acc[item].points += item === song.winner
+              ? song.points * 2
+              : song.points
+            acc[item].guessed++
           })
 
           return acc
@@ -67,8 +82,16 @@ export default {
 
     topWinners () {
       const topMap = Object.entries(this.top)
-        .map(([player, points]) => ({ player, points }))
-      return topMap.sort((a, b) => b.points - a.points)
+        .map(([player, { points, guessed }]) => ({
+          player,
+          points,
+          guessed
+        }))
+      return topMap.sort((a, b) => {
+        return b.points === a.points
+          ? b.guessed - a.guessed
+          : b.points - a.points
+      })
     }
   },
 
@@ -92,7 +115,7 @@ export default {
 
 .season-winners {
   &__row {
-    grid-template-columns: 128px 1fr 1fr;
+    grid-template-columns: 128px 1fr 0.4fr 0.4fr;
 
     @include respond-to(sm) {
       grid-template-columns: 48px 320px 64px;
@@ -101,14 +124,20 @@ export default {
   }
 
   &__id {
-    @include typo(h400, medium);
-
     display: flex;
     justify-content: center;
 
     &-img {
       width: 32px;
     }
+  }
+
+  &__id,
+  &__points,
+  &__guessed {
+    @include typo(h400, medium);
+
+    color: color(text);
   }
 }
 </style>
