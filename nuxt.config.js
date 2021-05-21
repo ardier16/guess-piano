@@ -11,7 +11,12 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        href: 'https://fonts.googleapis.com/css2?family=Material+Icons',
+        rel: 'stylesheet',
+        type: 'text/css'
+      }
     ]
   },
 
