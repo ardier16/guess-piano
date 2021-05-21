@@ -68,7 +68,15 @@ export default {
 <style lang="scss" scoped>
 .song-viewer {
   &__name {
-    @include typo(h300, light);
+    @include typo(h300, medium);
+
+    color: color(text);
+  }
+
+  &__points {
+    @include typo(h300, medium);
+
+    color: color(text);
   }
 
   &__guessers {
@@ -82,7 +90,7 @@ export default {
 
       background-color: transparent;
       border: none;
-      color: blue;
+      color: color(text-primary);
     }
   }
 }

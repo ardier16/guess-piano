@@ -11,17 +11,14 @@ $color-gray-700: #3b3642;
 $color-gray-800: #242127;
 $color-gray-900: #0c0b0d;
 
-$color-red-300: #ffa58e;
 $color-red-500: #e9512b;
-$color-red-700: #d53912;
-
-$color-green-300: #a7ffa6;
 $color-green-500: #43ad61;
-$color-green-700: #069e05;
-
 $color-blue-500: #1282e9;
 
-$color-pink-500: #f64f59;
+$color-blue-dark: #123c69;
+$color-bisque: #fff5f1;
+$color-bisque-dark: #faeae2;
+$color-pink: #ac3b61;
 
 @function color($color) {
   @return var(--color-#{$color});

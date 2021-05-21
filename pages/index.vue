@@ -39,7 +39,7 @@ export default {
   &__title {
     @include typo(h800, medium);
 
-    color: #35495e;
+    color: color(text-primary);
     font-family: var(--logo-font-family);
   }
 
@@ -54,8 +54,8 @@ export default {
     @include typo(h600, medium);
 
     display: flex;
-    border: 1px solid lightgray;
-    color: black;
+    border: 1px solid color(text);
+    color: color(text);
     padding: spacing(700);
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
@@ -64,6 +64,8 @@ export default {
 
     &:hover {
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      color: color(text-primary);
+      border-color: color(text-primary);
     }
   }
 }

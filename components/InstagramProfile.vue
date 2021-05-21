@@ -52,7 +52,7 @@ export default {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #111;
+  color: color(text);
   position: relative;
 
   &:hover {
@@ -86,6 +86,7 @@ export default {
     @include typo(h400, medium);
 
     margin-left: spacing(400);
+    font-family: var(--logo-font-family);
   }
 
   &--short &__name {

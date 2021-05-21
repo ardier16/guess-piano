@@ -67,6 +67,8 @@ export default {
     @include typo(h700, medium);
 
     text-align: center;
+    color: color(text);
+    font-family: var(--logo-font-family);
   }
 
   &__links {
@@ -81,8 +83,8 @@ export default {
     @include typo(h400, medium);
 
     display: flex;
-    border: 1px solid lightgray;
-    color: black;
+    border: 1px solid color(text);
+    color: color(text);
     padding: spacing(400) spacing(500);
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
@@ -94,7 +96,8 @@ export default {
     }
 
     &--active {
-      color: red;
+      color: color(text-primary);
+      border-color: color(text-primary);
     }
   }
 

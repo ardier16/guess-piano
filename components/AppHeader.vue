@@ -42,8 +42,8 @@ export default {
   height: 64px;
   position: sticky;
   top: 0;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-  background-color: #fff;
+  box-shadow: 0 4px 16px rgba(238, 188, 142, 0.2);
+  background-color: color(block-bg);
   display: flex;
   align-items: center;
   z-index: 2;
@@ -59,14 +59,14 @@ export default {
   &__links {
     display: grid;
     grid-auto-flow: column;
-    gap: spacing(500);
+    gap: spacing(700);
   }
 
   &__link {
     @include typo(h300, medium);
 
     text-decoration: none;
-    color: #111;
+    color: color(text);
 
     &:hover {
       text-decoration: underline;
@@ -76,7 +76,7 @@ export default {
   &__title {
     @include typo(h600, medium);
 
-    color: black;
+    color: color(text);
     text-align: center;
     font-family: var(--logo-font-family);
 

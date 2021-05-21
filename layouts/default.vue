@@ -37,6 +37,7 @@ export default {
 html,
 button {
   font-family: var(--app-font-family);
+  color: color(text);
 }
 
 .app {
@@ -46,7 +47,7 @@ button {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  background-color: #fafafa;
+  background-color: color(app-bg);
 
   &__content {
     @include container;

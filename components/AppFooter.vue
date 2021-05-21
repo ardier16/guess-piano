@@ -1,7 +1,7 @@
 <template>
   <footer class="app-footer">
     <p class="app-footer__copy">
-      #GUESSPIANO © ardier16
+      © ardier16
     </p>
   </footer>
 </template>
@@ -14,7 +14,7 @@ export default {
 
 <style lang="scss" scoped>
 .app-footer {
-  background-color: #eee;
+  background-color: color(text);
   display: flex;
   align-items: center;
   padding: spacing(600) 0;
@@ -24,7 +24,7 @@ export default {
     @include typo(h300, medium);
 
     text-align: center;
-    color: #111;
+    color: color(text-inverse);
   }
 }
 </style>
