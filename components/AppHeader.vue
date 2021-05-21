@@ -4,6 +4,7 @@
       <div class="app-header__links">
         <nuxt-link
           class="app-header__link"
+          active-class="app-header__link--active"
           to="/season-1"
         >
           Сезон 1
@@ -11,6 +12,7 @@
 
         <nuxt-link
           class="app-header__link"
+          active-class="app-header__link--active"
           to="/season-2"
         >
           Сезон 2
@@ -59,22 +61,27 @@ export default {
   &__links {
     display: grid;
     grid-auto-flow: column;
-    gap: spacing(700);
+    gap: spacing(600);
   }
 
   &__link {
-    @include typo(h300, medium);
+    @include typo(h400, medium);
 
     text-decoration: none;
     color: color(text);
+    font-family: var(--logo-font-family);
 
     &:hover {
       text-decoration: underline;
     }
+
+    &--active {
+      color: color(text-primary);
+    }
   }
 
   &__title {
-    @include typo(h600, medium);
+    @include typo(h500, medium);
 
     color: color(text);
     text-align: center;

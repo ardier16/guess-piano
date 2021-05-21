@@ -44,7 +44,7 @@ export default {
   }
 
   &__seasons {
-    margin-top: spacing(700);
+    margin-top: spacing(900);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: spacing(700);
@@ -54,13 +54,14 @@ export default {
     @include typo(h600, medium);
 
     display: flex;
-    border: 1px solid color(text);
+    border: 3px solid color(text);
     color: color(text);
     padding: spacing(700);
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     text-decoration: none;
     transition: all 200ms ease-out;
+    font-family: var(--logo-font-family);
 
     &:hover {
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);

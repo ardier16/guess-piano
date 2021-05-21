@@ -48,6 +48,7 @@ button {
   justify-content: center;
   min-height: 100vh;
   background-color: color(app-bg);
+  background: url('/bg.png');
 
   &__content {
     @include container;
