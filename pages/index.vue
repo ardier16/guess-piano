@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h1 class="home__title">
-      #GUESSPIANO
+      #GuessPiano
     </h1>
 
     <div class="home__seasons">
@@ -37,10 +37,10 @@ export default {
   text-align: center;
 
   &__title {
-    @include typo(h800, light);
+    @include typo(h800, medium);
 
     color: #35495e;
-    letter-spacing: 1px;
+    font-family: var(--logo-font-family);
   }
 
   &__seasons {

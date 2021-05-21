@@ -3,6 +3,7 @@
 
   &__row {
     display: grid;
+    gap: spacing(300);
     padding: spacing(400);
     align-items: center;
 

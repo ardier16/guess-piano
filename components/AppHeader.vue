@@ -22,7 +22,7 @@
         to="/"
       >
         <h1 class="app-header__title">
-          #GUESSPIANO
+          #GuessPiano
         </h1>
       </NuxtLink>
 
@@ -74,10 +74,11 @@ export default {
   }
 
   &__title {
-    @include typo(h500, medium);
+    @include typo(h600, medium);
 
     color: black;
     text-align: center;
+    font-family: var(--logo-font-family);
 
     &-wrp {
       text-decoration: none;

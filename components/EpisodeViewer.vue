@@ -37,7 +37,7 @@ export default {
 .episode-viewer {
   &__row {
     display: grid;
-    grid-template-columns: 0.2fr 0.9fr 1fr 0.2fr 0.8fr;
+    grid-template-columns: 0.2fr 0.9fr 1fr 0.2fr 0.6fr;
   }
 }
 </style>

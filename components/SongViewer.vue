@@ -1,26 +1,26 @@
 <template>
-  <div class="episode-viewer__row table__row">
-    <p class="episode-viewer__id">
+  <div class="song-viewer__row table__row">
+    <p class="song-viewer__id">
       {{ index + 1 }}
     </p>
 
-    <p class="episode-viewer__name">
+    <p class="song-viewer__name">
       {{ song.name }}
     </p>
 
     <instagram-profile
-      class="episode-viewer__winner"
+      class="song-viewer__winner"
       :name="song.winner"
     />
 
-    <p class="episode-viewer__points">
+    <p class="song-viewer__points">
       {{ song.points }}
     </p>
 
-    <div class="episode-viewer__guessers">
+    <div class="song-viewer__guessers">
       <div
         v-if="isGuessersShown"
-        class="episode-viewer__guessers-items"
+        class="song-viewer__guessers-items"
       >
         <instagram-profile
           v-for="(guesser, i) in song.guessers"
@@ -67,6 +67,10 @@ export default {
 
 <style lang="scss" scoped>
 .song-viewer {
+  &__name {
+    @include typo(h300, light);
+  }
+
   &__guessers {
     &-items {
       display: grid;

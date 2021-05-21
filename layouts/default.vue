@@ -19,10 +19,11 @@ export default {
 </script>
 
 <style lang="scss">
-html,
-button {
-  font-family:
-    'Source Sans Pro',
+@import '@/styles/fonts';
+
+:root {
+  --app-font-family:
+    'Inter',
     -apple-system,
     BlinkMacSystemFont,
     'Segoe UI',
@@ -30,6 +31,12 @@ button {
     'Helvetica Neue',
     Arial,
     sans-serif;
+  --logo-font-family: 'Pacifico', cursive;
+}
+
+html,
+button {
+  font-family: var(--app-font-family);
 }
 
 .app {
