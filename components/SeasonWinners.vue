@@ -14,6 +14,7 @@
       v-for="(winner, i) in topWinners.slice(0, 10)"
       :key="i"
       class="season-winners__row table__row"
+      :class="{ 'season-winners__row--bordered': i === 4 }"
     >
       <p class="season-winners__id">
         <template v-if="i < 3">
@@ -120,6 +121,10 @@ export default {
     @include respond-to(sm) {
       grid-template-columns: 48px 320px 64px 72px;
       width: 556px;
+    }
+
+    &--bordered {
+      border-bottom: 5px solid color(text-primary);
     }
   }
 
