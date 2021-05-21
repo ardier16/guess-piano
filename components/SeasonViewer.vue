@@ -11,7 +11,14 @@
         active-class="season-viewer__link--active"
         to="#winners"
       >
-        Победители
+        <p class="season-viewer__link-txt">
+          Победители
+        </p>
+
+        <status-badge
+          class="season-viewer__link-status"
+          :status="season.status"
+        />
       </nuxt-link>
 
       <nuxt-link
@@ -21,7 +28,14 @@
         active-class="season-viewer__link--active"
         :to="`#episode-${i + 1}`"
       >
-        Серия {{ i + 1 }}
+        <p class="season-viewer__link-txt">
+          Серия {{ i + 1 }}
+        </p>
+
+        <status-badge
+          class="season-viewer__link-status"
+          :status="episode.status"
+        />
       </nuxt-link>
     </div>
 
@@ -45,11 +59,12 @@
 </template>
 
 <script>
-import EpisodeViewer from './EpisodeViewer.vue'
+import EpisodeViewer from './EpisodeViewer'
+import StatusBadge from './StatusBadge'
 
 export default {
   name: 'SeasonViewer',
-  components: { EpisodeViewer },
+  components: { EpisodeViewer, StatusBadge },
 
   props: {
     season: { type: Object, required: true }
@@ -93,9 +108,7 @@ export default {
   }
 
   &__link {
-    @include typo(h400, medium);
-
-    display: flex;
+    display: grid;
     border: 1px solid color(text);
     color: color(text);
     padding: spacing(400) spacing(500);
@@ -117,6 +130,10 @@ export default {
     &--active {
       color: color(text-primary);
       border-color: color(text-primary);
+    }
+
+    &-txt {
+      @include typo(h400, medium);
     }
   }
 

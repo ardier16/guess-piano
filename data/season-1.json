@@ -1,7 +1,9 @@
 {
   "id": "1",
+  "status": "finished",
   "episodes": [
     {
+      "status": "finished",
       "songs": [
         {
           "name": "Таисия Повалий - За Тобой",
@@ -114,6 +116,7 @@
       ] 
     },
     {
+      "status": "finished",
       "songs": [
         {
           "name": "KAZKA - Плакала",

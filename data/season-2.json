@@ -1,7 +1,9 @@
 {
   "id": "2",
+  "status": "going",
   "episodes": [
     {
+      "status": "finished",
       "songs": [
         {
           "name": "SLAVA MARLOW - СНОВА Я НАПИВАЮСЬ",
@@ -95,6 +97,10 @@
           ]
         }
       ] 
+    },
+    {
+      "status": "coming",
+      "songs": []
     }
   ]
 }
