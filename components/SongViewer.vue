@@ -38,7 +38,10 @@
         Показать
       </button>
 
-      <p v-else>
+      <p
+        v-else
+        class="song-viewer__guessers-stub"
+      >
         –
       </p>
     </div>
@@ -67,6 +70,13 @@ export default {
 
 <style lang="scss" scoped>
 .song-viewer {
+  &__id,
+  &__guessers-stub {
+    @include typo(h300, medium);
+
+    color: color(text);
+  }
+
   &__name {
     @include typo(h300, medium);
 

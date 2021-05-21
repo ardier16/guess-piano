@@ -51,13 +51,8 @@ export default {
 .instagram-profile {
   display: flex;
   align-items: center;
-  text-decoration: none;
   color: color(text);
   position: relative;
-
-  &:hover {
-    text-decoration: underline;
-  }
 
   &__avatar {
     width: 48px;
