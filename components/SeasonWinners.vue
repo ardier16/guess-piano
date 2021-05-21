@@ -118,8 +118,8 @@ export default {
     grid-template-columns: 128px 1fr 0.4fr 0.4fr;
 
     @include respond-to(sm) {
-      grid-template-columns: 48px 320px 64px;
-      width: 464px;
+      grid-template-columns: 48px 320px 64px 72px;
+      width: 556px;
     }
   }
 
