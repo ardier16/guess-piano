@@ -99,6 +99,110 @@
       ] 
     },
     {
+      "status": "finished",
+      "songs": [
+        {
+          "name": "Верка Сердючка - Dancing Lasha Tumbai",
+          "points": 1,
+          "winner": "@daryatko",
+          "guessers": [
+            "@kseniamykolenko",
+            "@innaanep",
+            "@melovinator3_5alekseevez18",
+            "@zzzpiga"
+          ]
+        },
+        {
+          "name": "Loreen - Euphoria",
+          "points": 3,
+          "winner": "@innaanep",
+          "guessers": [
+            "@t.h.i.77",
+            "@zzzpiga",
+            "@daryatko",
+            "@shevchenko_aleksandr1974"
+          ]
+        },
+        {
+          "name": "Lordi - Hard Rock Hallelujah",
+          "points": 4,
+          "winner": "@daryatko",
+          "guessers": []
+        },
+        {
+          "name": "Duncan Laurence - Arcade",
+          "points": 2,
+          "winner": "@daryatko",
+          "guessers": [
+            "@innaanep",
+            "@kseniamykolenko",
+            "@melovinator3_5alekseevez18"
+          ]
+        },
+        {
+          "name": "Little Big - Uno",
+          "points": 1,
+          "winner": "@innaanep",
+          "guessers": [
+            "@daryatko",
+            "@mealinder",
+            "@valerichik_"
+          ]
+        },
+        {
+          "name": "Go_A - Шум",
+          "points": 2,
+          "winner": "@daryatko",
+          "guessers": [
+            "@kseniamykolenko",
+            "@innaanep",
+            "@melovinator3_5alekseevez18"
+          ]
+        },
+        {
+          "name": "Netta - Toy",
+          "points": 3,
+          "winner": "@innaanep",
+          "guessers": [
+            "@melovinator3_5alekseevez18",
+            "@kseniamykolenko",
+            "@shevchenko_aleksandr1974",
+            "@mealinder"
+          ]
+        },
+        {
+          "name": "SunStroke Project - Hey Mamma",
+          "points": 5,
+          "winner": "@daryatko",
+          "guessers": [
+            "@innaanep"
+          ]
+        },
+        {
+          "name": "Alexander Rybak - Fairytale",
+          "points": 2,
+          "winner": "@daryatko",
+          "guessers": [
+            "@innaanep",
+            "@melovinator3_5alekseevez18",
+            "@kseniamykolenko",
+            "@thezhanname"
+          ]
+        },
+        {
+          "name": "Руслана - Дикі Танці",
+          "points": 3,
+          "winner": "@innaanep",
+          "guessers": [
+            "@kseniamykolenko",
+            "@daryatko",
+            "@melovinator3_5alekseevez18",
+            "@shevchenko_aleksandr1974"
+          ]
+        }
+      ]
+    },
+    {
       "status": "coming",
       "songs": []
     }
