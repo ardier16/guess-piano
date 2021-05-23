@@ -19,7 +19,8 @@
     "core-js": "^3.9.1",
     "logrocket": "^1.2.1",
     "nuxt": "^2.15.3",
-    "nuxt-logrocket": "^1.5.2"
+    "nuxt-logrocket": "^1.5.2",
+    "vue-gtag": "^1.16.1"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.3",

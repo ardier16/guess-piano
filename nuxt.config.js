@@ -2,10 +2,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   googleAnalytics: {
-    id: 'G-W1PYKJH2QM'
+    id: 'G-EYFXFL450R'
   },
   gtm: {
-    id: 'G-W1PYKJH2QM'
+    id: 'G-EYFXFL450R'
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -46,6 +46,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/vue-gtag' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
