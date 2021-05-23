@@ -4,6 +4,10 @@
       #GuessPiano
     </h1>
 
+    <p class="home__desc">
+      Игра для настоящих меломанов!
+    </p>
+
     <div class="home__seasons">
       <nuxt-link
         class="home__season"
@@ -32,6 +36,15 @@
           status="going"
         />
       </nuxt-link>
+
+      <nuxt-link
+        class="home__rules"
+        to="/rules"
+      >
+        <p class="home__rules-txt">
+          Правила
+        </p>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -45,7 +58,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .home {
   display: flex;
   flex-direction: column;
@@ -64,26 +77,42 @@ export default {
     }
   }
 
+  &__desc {
+    @include typo(h500, medium);
+
+    color: color(text);
+    font-family: var(--logo-font-family);
+    margin-top: spacing(600);
+
+    @include respond-to(sm) {
+      @include typo(h400, medium);
+
+      margin-top: 0;
+    }
+  }
+
   &__seasons {
-    margin-top: spacing(900);
+    margin-top: spacing(500);
     display: grid;
+    grid-template: "season season" "rules rules";
     grid-template-columns: 1fr 1fr;
-    gap: spacing(700);
+    gap: spacing(600);
 
      @include respond-to(sm) {
-      margin-top: spacing(600);
+      margin-top: spacing(700);
       gap: spacing(400);
     }
   }
 
-  &__season {
+  &__season,
+  &__rules {
     @include typo(h600, medium);
 
     display: flex;
     flex-direction: column;
     border: 3px solid color(text);
     color: color(text);
-    padding: spacing(500) spacing(700);
+    padding: spacing(400) spacing(700);
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     text-decoration: none;
@@ -112,6 +141,10 @@ export default {
         @include typo(h200);
       }
     }
+  }
+
+  &__rules {
+    grid-area: rules;
   }
 }
 </style>

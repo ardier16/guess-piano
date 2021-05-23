@@ -25,7 +25,7 @@ export default {
     statusText () {
       const STATUS_TEXT_MAP = {
         [STATUSES.coming]: 'Скоро',
-        [STATUSES.going]: 'Идёт',
+        [STATUSES.going]: 'Активно',
         [STATUSES.finished]: 'Завершено'
       }
 
@@ -54,7 +54,7 @@ export default {
   &--coming &__pin { background-color: color(text-primary); }
   &--going &__pin {
     background-color: color(text-success);
-    animation: blink 1.5s infinite;
+    animation: blink 2s infinite;
   }
 
   &__pin {
@@ -74,7 +74,8 @@ export default {
 
 @keyframes blink {
   0% { opacity: 1; }
-  40% { opacity: 0; }
+  30% { opacity: 1; }
+  60% { opacity: 0; }
   100% { opacity: 1; }
 }
 </style>

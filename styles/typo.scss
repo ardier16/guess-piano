@@ -15,7 +15,7 @@
   --typo-fs-h500: 32px;
   --typo-fs-h600: 48px;
   --typo-fs-h700: 56px;
-  --typo-fs-h800: 108px;
+  --typo-fs-h800: 98px;
 
   // Line-height
   --typo-lh-h100: 16px;
@@ -25,7 +25,7 @@
   --typo-lh-h500: 48px;
   --typo-lh-h600: 64px;
   --typo-lh-h700: 108px;
-  --typo-lh-h800: 136px;
+  --typo-lh-h800: 124px;
 }
 
 @mixin typo-lh($line-height) {

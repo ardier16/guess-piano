@@ -31,6 +31,15 @@
         >
           Сезон 2
         </nuxt-link>
+
+        <nuxt-link
+          class="app-header__link"
+          active-class="app-header__link--active"
+          to="/rules"
+          @click.native="isLinksShown = false"
+        >
+          Правила
+        </nuxt-link>
       </div>
 
       <button
@@ -91,7 +100,7 @@ export default {
     @include respond-to(sm) {
       display: flex;
       transform: translateX(-100%);
-      width: 40vw;
+      width: 50vw;
       background-color: color(block-bg);
       z-index: 2;
       padding: spacing(400);

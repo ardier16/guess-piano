@@ -82,7 +82,7 @@ export default {
     @include typo(h700, medium);
 
     text-align: center;
-    color: color(text);
+    color: color(text-primary);
     font-family: var(--logo-font-family);
 
     @include respond-to(sm) {
@@ -109,7 +109,7 @@ export default {
 
   &__link {
     display: grid;
-    border: 1px solid color(text);
+    border: 3px solid color(text);
     color: color(text);
     padding: spacing(400) spacing(500);
     border-radius: 8px;
