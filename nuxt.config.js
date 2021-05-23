@@ -4,6 +4,9 @@ export default {
   googleAnalytics: {
     id: 'G-W1PYKJH2QM'
   },
+  gtm: {
+    id: 'G-W1PYKJH2QM'
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -72,7 +75,8 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
-    'nuxt-logrocket'
+    'nuxt-logrocket',
+    '@nuxtjs/gtm'
   ],
 
   logRocket: {
