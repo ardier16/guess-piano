@@ -54,8 +54,8 @@ export default {
     gap: spacing(700);
 
      @include respond-to(sm) {
-      margin-top: spacing(700);
-      gap: spacing(500);
+      margin-top: spacing(600);
+      gap: spacing(400);
     }
   }
 
@@ -75,7 +75,8 @@ export default {
     @include respond-to(sm) {
       @include typo(h500, medium);
 
-      padding: spacing(500);
+      padding: spacing(400);
+      white-space: nowrap;
     }
 
     &:hover {

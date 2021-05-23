@@ -5,9 +5,17 @@
         #
       </p>
 
-      <p>Участник</p>
-      <p>Очки</p>
-      <p>Песен угадано</p>
+      <p class="table__cell">
+        Участник
+      </p>
+
+      <p class="table__cell">
+        Очки
+      </p>
+
+      <p class="table__cell">
+        Песен угадано
+      </p>
     </div>
 
     <div
@@ -34,12 +42,24 @@
         :name="winner.player"
       />
 
-      <p class="season-winners__points">
-        {{ winner.points }}
+      <p class="season-winners__points table__cell">
+        <span class="table__cell-lbl">
+          Всего очков
+        </span>
+
+        <span class="table__cell-val">
+          {{ winner.points }}
+        </span>
       </p>
 
-      <p class="season-winners__guessed">
-        {{ winner.guessed }}
+      <p class="season-winners__guessed table__cell">
+        <span class="table__cell-lbl">
+          Песен угадано
+        </span>
+
+        <span class="table__cell-val">
+          {{ winner.guessed }}
+        </span>
       </p>
     </div>
   </div>
@@ -119,12 +139,16 @@ export default {
     grid-template-columns: 128px 1fr 0.4fr 0.4fr;
 
     @include respond-to(sm) {
-      grid-template-columns: 48px 320px 64px 72px;
-      width: 556px;
+      grid-template: "place winner" "points points" "songs songs";
+      grid-template-columns: auto 1fr;
     }
 
     &--bordered {
       border-bottom: 5px solid color(text-primary);
+
+      @include respond-to(sm) {
+        border-radius: 8px 8px 0 0;
+      }
     }
   }
 
@@ -132,14 +156,43 @@ export default {
     display: flex;
     justify-content: center;
 
+    @include respond-to(sm) {
+      grid-area: place;
+    }
+
     &-img {
       width: 32px;
       height: 48px;
     }
   }
 
+  &__winner {
+    @include respond-to(sm) {
+      grid-area: winner;
+    }
+  }
+
+  &__points {
+    @include typo(h400, medium);
+
+    color: color(text-primary);
+
+    @include respond-to(sm) {
+      grid-area: points;
+      border-top: 2px solid color(block-border);
+      padding-top: spacing(300);
+    }
+  }
+
+  &__guessed {
+    @include respond-to(sm) {
+      grid-area: songs;
+      border-top: 1px solid color(block-border);
+      padding-top: spacing(300);
+    }
+  }
+
   &__id,
-  &__points,
   &__guessed {
     @include typo(h400, medium);
 

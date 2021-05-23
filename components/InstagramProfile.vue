@@ -60,6 +60,11 @@ export default {
     border-radius: 50%;
     z-index: 1;
 
+    @include respond-to(sm) {
+      width: 40px;
+      height: 40px;
+    }
+
     &-stub {
       @include typo(h500);
 
@@ -74,6 +79,11 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @include respond-to(sm) {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 
@@ -82,6 +92,13 @@ export default {
 
     margin-left: spacing(400);
     font-family: var(--logo-font-family);
+
+    @include respond-to(sm) {
+      @include typo(h300, medium);
+
+      word-break: break-all;
+      margin-left: spacing(300);
+    }
   }
 
   &--short &__name {

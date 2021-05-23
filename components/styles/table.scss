@@ -1,10 +1,11 @@
 .table {
   background-color: color(block-bg);
-  border-radius:8px;
-
+  border-radius: 8px;
 
   @include respond-to(sm) {
-    overflow-x: auto;
+    display: grid;
+    gap: spacing(400);
+    background-color: transparent;
   }
 
   &__row {
@@ -14,8 +15,22 @@
     align-items: center;
     width: 100%;
 
+    @include respond-to(sm) {
+      column-gap: spacing(400);
+      background-color: color(block-bg);
+      border-radius: 8px;
+    }
+
     &:nth-child(odd) {
       background-color: color(block-dark-bg);
+
+      &:last-child {
+        border-radius: 0 0 8px 8px;
+
+        @include respond-to(sm) {
+          border-radius: 8px;
+        }
+      }
     }
 
     &--head:first-child {
@@ -26,12 +41,38 @@
       p {
         @include typo-fw(medium);
       }
+
+      @include respond-to(sm) {
+        display: none;
+      }
     }
   }
 
   &__cell {
+    @include respond-to(sm) {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: spacing(400);
+      align-items: center;
+    }
+
     &--center {
       text-align: center;
+    }
+
+    &-lbl {
+      @include typo(h200, medium);
+
+      display: none;
+
+      @include respond-to(sm) {
+        display: initial;
+        color: color(text-secondary);
+      }
+    }
+
+    &-val {
+      justify-self: end;
     }
   }
 }

@@ -121,6 +121,7 @@ export default {
       grid-auto-flow: row;
       padding: spacing(300) spacing(400);
       width: 100%;
+      text-align: center;
     }
 
     &:hover {
