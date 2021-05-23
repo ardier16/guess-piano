@@ -1,6 +1,9 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  googleAnalytics: {
+    id: 'G-W1PYKJH2QM'
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -8,7 +11,21 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      {
+        hid: 'description',
+        name: 'description',
+        content: '#GuessPiano - музыкальная игра, где нужно угадать песню, сыгранную на пианино'
+      },
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        content: '#GuessPiano - Угадай Песню'
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: '#GuessPiano - музыкальная игра, где нужно угадать песню, сыгранную на пианино'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -44,7 +61,8 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module'
+    '@nuxtjs/stylelint-module',
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -53,8 +71,18 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'nuxt-logrocket'
   ],
+
+  logRocket: {
+    // configure LogRocket
+    logRocketId: 'guesspiano/guesspiano',
+    devModeAllowed: false,
+    config: {
+      //
+    }
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

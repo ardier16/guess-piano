@@ -1536,6 +1536,13 @@
     consola "^2.15.0"
     eslint-webpack-plugin "^2.4.1"
 
+"@nuxtjs/google-analytics@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/google-analytics/-/google-analytics-2.4.0.tgz#3bb9f398a05cc23340d1f423f8d8653dc4114f46"
+  integrity sha512-rDQTwHIjyjVrx8GywHPuWykJ3jRFGaHl5Iqji/y8tQWUc0yGEeHxOoR0yimzxnTS1Ph2/PubQYpgnVeEPEdL/A==
+  dependencies:
+    vue-analytics "^5.22.1"
+
 "@nuxtjs/proxy@^2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/proxy/-/proxy-2.1.0.tgz#fa7715a11d237fa1273503c4e9e137dd1bf5575b"
@@ -7245,6 +7252,16 @@ log-symbols@^4.0.0:
     chalk "^4.1.0"
     is-unicode-supported "^0.1.0"
 
+logrocket-vuex@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/logrocket-vuex/-/logrocket-vuex-0.0.3.tgz#e11d65d384f0c9fdac72f984436cc038adf3db90"
+  integrity sha1-4R1l04Twyf2scvmEQ2zAOK3z25A=
+
+logrocket@^1.0.14, logrocket@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/logrocket/-/logrocket-1.2.1.tgz#a46d017802d609991bcdf8d0346bbd582d1c2181"
+  integrity sha512-Tkl5OF3Bvt04k3P2SBKrDXFldm4bFeCEAkg+m1oyaZT31wHlcuch1xXU57at77ptRIXtehROPJw3R0fvTviRhw==
+
 longest-streak@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/longest-streak/-/longest-streak-2.0.4.tgz#b8599957da5b5dab64dee3fe316fa774597d90e4"
@@ -7953,6 +7970,15 @@ num2fraction@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
   integrity sha1-b2gragJ6Tp3fpFZM0lidHU5mnt4=
+
+nuxt-logrocket@^1.5.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/nuxt-logrocket/-/nuxt-logrocket-1.5.2.tgz#f16348c3fa8d0f9acb573b4333721ff414ab630a"
+  integrity sha512-xm/Qfz+XIHHIuY/lug1rsakFw0ygIo1+NxQueIitrOA0l5CWvIDsL+KSqge2kCziL0ThGL5SrvUYH9MGjf3RHA==
+  dependencies:
+    deepmerge "^4.2.2"
+    logrocket "^1.0.14"
+    logrocket-vuex "^0.0.3"
 
 nuxt@^2.15.3:
   version "2.15.4"
@@ -11463,6 +11489,11 @@ vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
+
+vue-analytics@^5.22.1:
+  version "5.22.1"
+  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.22.1.tgz#9d6b32da56daee1b9dfb23a267b50349a03f710f"
+  integrity sha512-HPKQMN7gfcUqS5SxoO0VxqLRRSPkG1H1FqglsHccz6BatBatNtm/Vyy8brApktZxNCfnAkrSVDpxg3/FNDeOgQ==
 
 vue-client-only@^2.0.0:
   version "2.0.0"
