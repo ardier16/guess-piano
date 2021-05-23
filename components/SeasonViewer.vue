@@ -133,6 +133,10 @@ export default {
       border-color: color(text-primary);
     }
 
+    &-status {
+      @include typo(h200);
+    }
+
     &-txt {
       @include typo(h400, medium);
     }

@@ -65,9 +65,10 @@ export default {
   }
 
   &__txt {
-    @include typo(h200, medium);
+    @include typo-fw(medium);
 
     color: inherit;
+    font-size: inherit;
   }
 }
 
