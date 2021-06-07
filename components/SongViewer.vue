@@ -14,9 +14,17 @@
       </span>
 
       <instagram-profile
+        v-if="song.winner"
         class="song-viewer__winner-val table__cell-val"
         :name="song.winner"
       />
+
+      <span
+        v-else
+        class="song-viewer__guessers-stub"
+      >
+        –
+      </span>
     </p>
 
     <p class="song-viewer__points table__cell">

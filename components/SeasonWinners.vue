@@ -81,6 +81,8 @@ export default {
       return this.season.episodes
         .reduce((acc, ep) => [...acc, ...ep.songs], [])
         .reduce((acc, song) => {
+          if (!song.winner) { return acc }
+
           const guessers = [song.winner, ...song.guessers]
 
           guessers.forEach((item) => {

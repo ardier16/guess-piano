@@ -203,8 +203,97 @@
       ]
     },
     {
-      "status": "coming",
-      "songs": []
+      "status": "finished",
+      "songs": [
+        {
+          "name": "Eurythmics - Sweet Dreams (1983)",
+          "points": 1,
+          "winner": "@daryatko",
+          "guessers": [
+            "@innaanep",
+            "@zzzpiga",
+            "@vira_fedorenko",
+            "@mihustle"
+          ]
+        },
+        {
+          "name": "Форум - Белая ночь (1985)",
+          "points": 2,
+          "winner": "@estebnickaya",
+          "guessers": [
+            "@daryatko",
+            "@innaanep",
+            "@shevchenko_aleksandr1974"
+          ]
+        },
+        {
+          "name": "Dead or Alive - You Spin Me Round (Like a Record) (1985)",
+          "points": 4,
+          "winner": "@innaanep",
+          "guessers": [
+            "@mealinder"
+          ]
+        },
+        {
+          "name": "Michael Jackson - Billie Jean (1982)",
+          "points": 2,
+          "winner": "@innaanep",
+          "guessers": [
+            "@daryatko",
+            "@mealinder",
+            "@shevchenko_aleksandr1974",
+            "@ihor.iliushkin"
+          ]
+        },
+        {
+          "name": "Journey - Don't Stop Believin' (1981)",
+          "points": 5,
+          "winner": "@kseniamykolenko",
+          "guessers": []
+        },
+        {
+          "name": "Земляне - Трава у дома (1983)",
+          "points": 3,
+          "winner": "@innaanep",
+          "guessers": []
+        },
+        {
+          "name": "Michael Sembello - Maniac (1983)",
+          "points": 4,
+          "winner": "",
+          "guessers": []
+        },
+        {
+          "name": "a-ha - Take on me (1985)",
+          "points": 3,
+          "winner": "@innaanep",
+          "guessers": [
+            "@kseniamykolenko",
+            "@estebnickaya",
+            "@danny.yakovlev"
+          ]
+        },
+        {
+          "name": "OST Гостья из будущего - Прекрасное далеко (1984)",
+          "points": 1,
+          "winner": "@estebnickaya",
+          "guessers": [
+            "@daryatko",
+            "@innaanep",
+            "@danny.yakovlev",
+            "@kseniamykolenko"
+          ]
+        },
+        {
+          "name": "Roxette - Listen to Your Heart (1988)",
+          "points": 3,
+          "winner": "@kseniamykolenko",
+          "guessers": [
+            "@daryatko",
+            "@estebnickaya"
+          ]
+        }
+      ]
     },
     {
       "status": "coming",
